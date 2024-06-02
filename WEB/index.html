@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Vehicle Service</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <section>
+        <nav class="navbar">
+            <div class="container-fluid">
+              <div class="navbar-header">
+                <a class="navbar-brand" href="#">Vehicle Service</a>
+              </div>
+              <ul class="nav navbar-nav navbar-right">
+                <li id="addJob-btn" class="hidden"><a><button class=" btn btn-primary"> + Create New Job</button></a></li>
+                <li id="addUser-btn" class="hidden"><a><button class="btn btn-primary"> + Add User</button></a></li>
+                <li id="login-btn"><a><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+              </ul>
+            </div>
+        </nav>
+    </section>
+    <section id="login-section" class="hidden">
+        <div class="row well ">
+            <div class="col-sm-6 loginPart ">
+                <h1>login</h1>
+            <form id="loginForm">
+                <div class="form-group">
+                  <label for="username">User Name:</label>
+                  <input type="text" class="form-control" id="username">
+                </div>
+                <div class="form-group">
+                  <label for="password">Password:</label>
+                  <input type="password" class="form-control" id="password">
+                </div>
+                <button type="submit"class="btn btn-success">Login</button>
+                <div id="message" class="message"></div>
+              </form>
+            </div>
+            
+          </div>
+    </section>
+    </div>
+    <section id="vehicleForm-section" class="well hidden vehicleForm-section" >
+        <button id="cancelNewJob" class="btn btn-danger btn-sm" style="float: right;border-radius: 40px;font-weight: 900;">X</button>
+        <table id="vehicleTable" class="table table-hover" >
+            <thead>
+              <tr>
+                <th>VIN</th>
+                <th>Make</th>
+                <th>Model</th>
+                <th>Mfg.Year</th>
+                <th>Owner Name</th>
+                <th>Estimation</th>
+                <th>Status</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <form id="vehicleForm">
+                    <th><input type="text" id="vin" ></th>
+                    <th><input type="text" id="make"></th>
+                    <th><input type="text" id="model"></th>
+                    <th><input type="number" id="year"></th>
+                    <th> <input type="text" id="owner"></th>
+                    <th> <input type="number" id="estimation"></th>
+                    <th><select id="status">
+                        <option value="IN CENTER">IN CENTER</option>
+                        <option value="IN PROGRESS">IN PROGRESS</option>
+                        <option value="SERVICE DONE">SERVICE DONE</option>
+                        <option value="DELIVERED">DELIVERED</option>
+                    </select>
+                    </th>
+                    <th>
+                        <button type="submit" id="submitButton" class="btn btn-success">Submit</button>
+                    </th>
+                </form>
+                  </tr>
+            </tbody>
+          </table>
+    </section>
+    <section id="dashboard-section" class="hidden" >
+        <h5>Available Vehicles [<span id="count"></span>] :</h5>
+        <div class="well">
+            <table id="vehicleTable" class="table table-hover" >
+                <thead>
+                  <tr>
+                    <th>VIN</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Mfg.Year</th>
+                    <th>Owner Name</th>
+                    <th>Estimation</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="table-body">
+                </tbody>
+              </table>
+        </div>
+        
+    </section>
+</body>
+<script src="script.js"></script>
+</html>

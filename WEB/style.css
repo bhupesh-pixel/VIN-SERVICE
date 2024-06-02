@@ -1,0 +1,15 @@
+.hidden {
+    display: none;
+}
+
+.loginPart{
+    margin: 20px;
+}
+
+.message{
+    color: red;
+}
+
+.vehicleForm-section{
+    margin: 20px 0px;
+}

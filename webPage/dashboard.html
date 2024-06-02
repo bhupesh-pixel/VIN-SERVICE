@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Service App - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Dashboard</h1>
+        <div id="user-info"></div>
+        <form id="vehicleForm">
+            <h2>Vehicle Information</h2>
+            <div class="form-group">
+                <label for="vin">VIN</label>
+                <input type="text" id="vin" >
+            </div>
+            <div class="form-group">
+                <label for="make">Make</label>
+                <input type="text" id="make">
+            </div>
+            <div class="form-group">
+                <label for="model">Model</label>
+                <input type="text" id="model">
+            </div>
+            <div class="form-group">
+                <label for="year">Year</label>
+                <input type="number" id="year">
+            </div>
+            <div class="form-group">
+                <label for="owner">Owner</label>
+                <input type="text" id="owner">
+            </div>
+            <div class="form-group">
+                <label for="estimation">Estimation</label>
+                <input type="number" id="estimation">
+            </div>
+            <div class="form-group">
+                <label for="status">Status</label>
+                <select id="status">
+                    <option value="IN CENTER">IN CENTER</option>
+                    <option value="IN PROGRESS">IN PROGRESS</option>
+                    <option value="SERVICE DONE">SERVICE DONE</option>
+                    <option value="DELIVERED">DELIVERED</option>
+                </select>
+            </div>
+            <button type="submit" id="submitButton">Submit</button>
+        </form>
+        <table id="vehicleTable">
+            <thead>
+                <tr>
+                    <th>VIN</th>
+                    <th>Make</th>
+                    <th>Model</th>
+                    <th>Year</th>
+                    <th>Owner</th>
+                    <th>Estimation</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+    <script src="dashboard.js"></script>
+</body>
+</html>
